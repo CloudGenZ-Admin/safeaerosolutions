@@ -1,193 +1,69 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Shield, Plane, Settings, Lock, Award, FileCheck, Database, BookOpen, ChevronDown } from "lucide-react";
+import { Shield, Plane, Settings, Lock, FileCheck } from "lucide-react";
 
 const certifications = [
   {
-    icon: Shield,
-    title: "IAQG Aerospace Auditor (AS9100D)",
-    summary: "Qualified under the International Aerospace Quality Group framework to perform certification audits against globally recognized aerospace standards.",
-    details: [
-      "Authorization to audit AS9100-compliant organizations",
-      "Aerospace sector-specific auditing competency",
-      "Evaluation of risk-based thinking in aerospace supply chains",
-      "Assessment of configuration management and product safety controls",
-    ],
-  },
-  {
-    icon: FileCheck,
-    title: "AS9100D / AS9101F Lead Auditor",
-    summary: "Lead Auditor for the international QMS standard specific to aerospace, aviation, and defense organizations.",
-    details: [
-      "Full-scope certification audits",
-      "Product realization process evaluation",
-      "Risk management framework assessment",
-      "Aviation safety and traceability verification",
-    ],
-  },
-  {
-    icon: Award,
-    title: "ISO 9001:2015 Lead Auditor",
-    summary: "Global standard for Quality Management Systems across industries.",
-    details: [
-      "Organizational process effectiveness evaluation",
-      "Management review and leadership accountability",
-      "Risk-based thinking integration",
-      "Customer satisfaction monitoring systems",
-    ],
-  },
-  {
-    icon: Settings,
-    title: "IATF 16949:2016",
-    summary: "Automotive and complex manufacturing supply chain quality systems, applicable in aerospace-adjacent environments.",
-    details: [
-      "Defect prevention systems evaluation",
-      "Process capability and performance metrics",
-      "Supplier risk control",
-      "Production discipline and traceability",
-    ],
-  },
-  {
-    icon: Shield,
-    title: "Exemplar Global Lead OHSMS Auditors",
-    summary: "Lead auditor certification for Occupational Health and Safety Management Systems (OHSAS 18001:2007).",
-    details: [
-      "Occupational health and safety auditing",
-      "Safety policy enforcement",
-      "Workplace risk identification and mitigation",
-      "Compliance with global OHSAS frameworks",
-    ],
-  },
-  {
-    icon: Plane,
-    title: "AME M2 – Aircraft Maintenance Engineer",
-    summary: "Maintenance and release authority on multi-engine aircraft under regulated aviation frameworks.",
-    details: [
-      "Practical aircraft systems knowledge",
-      "Authority to certify maintenance work",
-      "Heavy and line maintenance experience",
-      "C.S.E. Aviation Engineering College (AME Diploma)",
-    ],
-  },
-  {
-    icon: Plane,
-    title: "FAA A&P (Airframe & Powerplant)",
-    summary: "United States regulatory credential allowing maintenance authority under Federal Aviation Regulations.",
-    details: [
-      "Compliance under FAA frameworks",
-      "Aircraft structure and propulsion expertise",
-      "International regulatory familiarity",
-      "Cross-border aviation standards competency",
-    ],
-  },
-  {
     icon: Lock,
-    title: "Stage 2 Secret Clearance Certificate",
-    summary: "Authorized to work on controlled government, defense, and sensitive military programs.",
+    title: "Security Clearance: Active Secret Level II",
+    summary: "Authorized to architect, lead, and safeguard highly classified, ITAR-adjacent aerospace and defense initiatives.",
     details: [
-      "Defense procurement projects",
-      "Military aircraft manufacturing oversight",
-      "Government Quality Assurance initiatives",
+      "File No: 96249739",
+      "Expiry: Jan 30, 2030",
+      "Immediate readiness for DND / NATO highly classified environments."
     ],
   },
   {
     icon: FileCheck,
-    title: "Controlled Goods Certificate",
-    summary: "Certified for the examination, possession, or transfer of controlled goods.",
+    title: "Canada's Controlled Goods Program (CGP)",
+    summary: "Fully Approved & Registered.",
     details: [
-      "Controlled Goods - Quality Assurance (RCMP)",
-      "Compliance with Canadian defense trade controls",
+      "Fully registered and authorized to examine, possess, or transfer controlled goods.",
+      "Management of tactical data and military components under CGP mandates.",
+      "Compliance verification of ITAR data sanitization protocols."
     ],
   },
   {
-    icon: Database,
-    title: "Material Identification MI Data Specialist",
-    summary: "Certification in Material Identification and Data Specialization.",
+    icon: Shield,
+    title: "AS9100 Rev D & ISO 9001:2015 Lead Auditor",
+    summary: "Accredited 3rd-party aerospace registrar assessor.",
     details: [
-      "Materiel cataloging and identification",
-      "Data governance frameworks",
-      "Inventory precision and tracking",
-    ],
-  },
-  {
-    icon: Database,
-    title: "DRMIS Certification",
-    summary: "Defense Resource Management Information System (DRMIS) qualifications.",
-    details: [
-      "Defense materiel management credentials",
-      "Equipment maintenance tracking qualifications",
+      "Delivers expert Stage 1 (Readiness), Stage 2 (Certification), and Surveillance Audits.",
+      "Executes audits for global bodies including TUV Rheinland and BSI Group.",
+      "Evaluates risk-based thinking in aerospace supply chains.",
     ],
   },
   {
     icon: Settings,
-    title: "DRMIS Training Certificate",
-    summary: "Formal training completion in DRMIS operations and workflows.",
+    title: "Quality Management Certified (QMC) & IATF 16949",
+    summary: "Extensive qualifications in complex manufacturing supply chain quality systems.",
     details: [
-      "DRMIS Navigation and Operations",
-      "Systematic cataloging and compliance tracking",
+      "Multi-Standard Compliance Assessments.",
+      "Defect prevention systems and RCCA / NCR Management.",
+      "Also holds ISO 14001 (Environmental) auditing experience."
     ],
   },
   {
-    icon: Database,
-    title: "Principle of Material Master Data Certificate",
-    summary: "Foundational certification on the lifecycle and structuring of Material Master Data.",
+    icon: Plane,
+    title: "TCCA AME M2 & FAA A&P License",
+    summary: "Transport Canada Civil Aviation & Federal Aviation Administration maintenance credentials.",
     details: [
-      "Material master data structures",
-      "Data consistency and validation",
-      "Integration with enterprise resource planning",
+      "Maintenance and release authority on multi-engine commercial and tactical aircraft.",
+      "Deep operational footprint on heavy commercial jets and military fixed-wing.",
+      "Seamless liaison between civil (CARs/FARs) and military (TAR) regulations."
     ],
   },
   {
-    icon: BookOpen,
-    title: "Introduction to MDG Navigation in Fiori (303648)",
-    summary: "Foundational training on navigating SAP Master Data Governance utilizing the Fiori user experience.",
+    icon: Plane,
+    title: "Aircraft Certification Authority (ACA) Endorsed",
+    summary: "Authorized specific platform endorsements across high-performance aircraft.",
     details: [
-      "SAP Fiori Launchpad utilization",
-      "MDG dashboard navigation and functionality",
-      "User-centric data governance operations",
+      "Endorsed across Dash 8 (D8).",
+      "Endorsed across CRJ Series.",
+      "Endorsed across Learjet variants.",
+      "Endorsed across Challenger CL-850 platforms."
     ],
-  },
-  {
-    icon: FileCheck,
-    title: "How to Request a Material Master Record (303664)",
-    summary: "Certification on the procedural workflows for initiating and requesting new Material Master Records.",
-    details: [
-      "SAP MDG request workflows and structuring",
-      "Data entry standards for new materials",
-      "Cross-functional approval routing processes",
-    ],
-  },
-  {
-    icon: Settings,
-    title: "Enrich & Approve Material Master Record (303672)",
-    summary: "Specialized training in validating, enriching, and finalizing material master data approvals.",
-    details: [
-      "Data quality enrichment techniques",
-      "Verification of technical material specifications",
-      "Final approval workflows and execution in MDG",
-    ],
-  },
-  {
-    icon: Database,
-    title: "Material Master Record (MMR) Reporting (303666)",
-    summary: "Certification in extracting, analyzing, and reporting on Material Master Records to ensure data integrity.",
-    details: [
-      "MMR data extraction and analytical techniques",
-      "Auditing and data integrity reporting",
-      "Inventory and catalog data compliance tracking",
-    ],
-  },
-  {
-    icon: Award,
-    title: "Leadership & Supervisory Skills",
-    summary: "Trained in leadership and team management to guide organizations effectively.",
-    details: [
-      "KLM Leadership Training",
-      "America Management Association (Supervisory Skills)",
-      "Cross-functional team coordination",
-      "Strategic business alignment",
-    ],
-  },
+  }
 ];
 
 const CertCard = ({
@@ -244,14 +120,6 @@ const CertCard = ({
             </AnimatePresence>
           </div>
         </div>
-        
-        <motion.div
-          animate={{ rotate: expanded ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="shrink-0 mt-1.5"
-        >
-          <ChevronDown className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-        </motion.div>
       </div>
     </motion.div>
   );
@@ -260,18 +128,18 @@ const CertCard = ({
 const CertificationsSection = () => {
   return (
     <section className="py-24 md:py-32 bg-secondary/20 relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12 md:mb-16 text-center md:text-left"
+          className="mb-12 md:mb-16 text-center"
         >
           <h2 className="font-heading text-xs md:text-sm tracking-[0.4em] uppercase text-primary mb-3">
-            Certifications & Regulatory Authority
+            Corporate Profile & Executive Credentials
           </h2>
-          <div className="w-16 h-[2px] bg-primary mx-auto md:mx-0" />
+          <div className="w-16 h-[2px] bg-primary mx-auto" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6 items-start">
@@ -288,7 +156,7 @@ const CertificationsSection = () => {
           className="text-xs text-muted-foreground mt-10 flex items-center justify-center gap-2"
         >
           <span className="animate-pulse w-2 h-2 rounded-full bg-primary"></span>
-          Click any certification to expand details
+          Click any credential to expand validation details
         </motion.p>
       </div>
     </section>

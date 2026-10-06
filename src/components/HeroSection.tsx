@@ -3,14 +3,13 @@ import heroBg from "@/assets/hero-bg.jpg";
 import { Shield, Award, Plane } from "lucide-react";
 
 const badges = [
-  "Lead Auditor",
-  "AS9100D",
-  "ISO 9001:2015",
-  "IATF 16949:2016",
-  "OHSAS 18001:2007",
-  "AME M2",
-  "FAA A&P",
-  "Secret Clearance Level II",
+  "Active Secret Level II (Exp: 2030)",
+  "CGP Approved & Registered",
+  "AS9100 Rev D Lead Auditor",
+  "ISO 9001:2015 Lead Auditor",
+  "TCCA AME M2",
+  "FAA A&P License",
+  "Quality Management Certified (QMC)",
 ];
 
 const HeroSection = () => {
@@ -34,29 +33,26 @@ const HeroSection = () => {
             <Plane className="w-6 h-6 text-primary" />
           </div>
 
-          {/* NEW: Aero Guardian Branding */}
           <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight uppercase mb-4">
-            Aero <span className="text-gradient-gold">Guardian</span>
+            SafeAero <span className="text-gradient-gold">Solutions Inc.</span>
           </h1>
           <p className="font-heading text-lg sm:text-xl md:text-2xl tracking-[0.1em] md:tracking-[0.2em] uppercase text-foreground mb-6">
-            Safeguarding Aviation Compliance & Operational Excellence
+            Safeguarding Defense Compliance & Operational Excellence
           </p>
 
           <div className="w-24 h-[2px] bg-primary mx-auto mb-8" />
 
-          {/* OLD: Strictly Preserved Francis Ukposidolo Branding */}
           <h2 className="font-heading text-2xl sm:text-3xl font-bold uppercase tracking-tight mb-2 text-foreground/90">
             Led By Francis <span className="text-gradient-gold">Ukposidolo</span>
           </h2>
           <p className="font-heading text-sm sm:text-base tracking-[0.2em] uppercase text-muted-foreground mb-3">
-            Lead Auditor, Consultant & Quality Authority
+            CEO & Principal Consultant | Airworthiness SME
           </p>
           <p className="text-base sm:text-lg text-primary font-medium tracking-wide mb-10 max-w-2xl mx-auto">
-            Helping companies translate business goals into reality.
+            Architecting precision aerospace solutions and tactical mission software compliance for Tier-1 defense primes.
           </p>
         </motion.div>
 
-        {/* NEW: Call to Action Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -67,22 +63,21 @@ const HeroSection = () => {
             href="#contact"
             className="w-full sm:w-auto px-8 py-4 bg-primary text-primary-foreground font-heading text-sm tracking-[0.2em] uppercase font-semibold hover:opacity-90 transition-opacity"
           >
-            Book a Consultation
+            Engagement Portal
           </a>
           <a
-            href="#contact"
+            href="#overview"
             className="w-full sm:w-auto px-8 py-4 border border-primary text-primary font-heading text-sm tracking-[0.2em] uppercase font-semibold hover:bg-primary/10 transition-colors"
           >
-            Request a Quote
+            Review Credentials Matrix
           </a>
         </motion.div>
 
-        {/* OLD: Strictly Preserved Badges */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-4xl mx-auto"
+          className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-5xl mx-auto"
         >
           {badges.map((badge) => (
             <span
@@ -100,7 +95,7 @@ const HeroSection = () => {
           transition={{ delay: 1.2, duration: 1 }}
           className="mt-16"
         >
-          <a href="#overview" className="inline-block">
+          <a href="#about" className="inline-block">
             <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex items-start justify-center p-1.5 mx-auto hover:border-primary transition-colors">
               <motion.div
                 className="w-1.5 h-1.5 bg-primary rounded-full"
