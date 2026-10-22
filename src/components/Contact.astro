@@ -1,0 +1,159 @@
+---
+const ctaItems = [
+  'Stage 1 Readiness Review',
+  'Defense Procurement Gateway',
+  'Quality Assurance Oversight',
+  'Aerospace Compliance Strategy',
+];
+
+const currentYear = new Date().getFullYear();
+---
+
+<section id="contact" class="py-24 md:py-32 relative border-t border-navy-medium/50">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+      <!-- Left: CTA + Contact Info -->
+      <div class="fade-in space-y-12">
+        <div>
+          <h2 class="font-heading text-3xl md:text-5xl font-bold uppercase tracking-tight mb-6">
+            Partner with a Proven{' '}
+            <span class="text-gradient-gold">Aerospace & Defense</span>{' '}
+            Quality Leader
+          </h2>
+          <div class="w-16 h-[2px] bg-gold mb-8"></div>
+          <p class="text-gray-400 text-lg mb-6">
+            Engage SafeAero Solutions Inc. for:
+          </p>
+
+          <div class="flex flex-wrap gap-3 mb-12">
+            {ctaItems.map((item) => (
+              <span class="px-4 py-2 border border-gold text-gold font-heading text-xs tracking-widest uppercase bg-gold/5">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Phone -->
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-gold/10 rounded-full">
+              <svg class="w-5 h-5 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-heading uppercase tracking-widest text-sm mb-1">Direct Contact</h4>
+              <a href="tel:+16474595384" class="text-gray-400 hover:text-gold transition-colors">1-647-459-5384</a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-gold/10 rounded-full">
+              <svg class="w-5 h-5 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <h4 class="font-heading uppercase tracking-widest text-sm mb-1">Email Us</h4>
+              <a href="mailto:fsafeaero@gmail.com" class="text-gray-400 hover:text-gold transition-colors">fsafeaero@gmail.com</a>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-gold/10 rounded-full">
+              <svg class="w-5 h-5 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4 class="font-heading uppercase tracking-widest text-sm mb-1">Location</h4>
+              <p class="text-gray-400 leading-relaxed">
+                Ottawa, ON<br/>Canada
+              </p>
+            </div>
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-gold/10 rounded-full">
+              <svg class="w-5 h-5 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <h4 class="font-heading uppercase tracking-widest text-sm mb-1">Network</h4>
+              <!-- TODO: Replace with Francis Ukposidolo's actual LinkedIn profile URL -->
+              <a href="https://www.linkedin.com/in/francisukposidolo" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">
+                linkedin.com/in/francisukposidolo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="fade-in bg-navy-light/50 p-8 border border-navy-medium shadow-lg" style="transition-delay: 0.2s">
+        <h3 class="font-heading text-xl uppercase mb-6 text-gray-200">Engagement Portal</h3>
+        <form id="contact-form" class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label for="name" class="text-xs font-heading uppercase tracking-widest text-gray-400">POC Name</label>
+              <input id="name" type="text" required class="w-full bg-navy border border-navy-medium px-4 py-3 text-sm text-gray-200 focus:border-gold focus:outline-none transition-colors" placeholder="Name" />
+            </div>
+            <div class="space-y-2">
+              <label for="org" class="text-xs font-heading uppercase tracking-widest text-gray-400">Organization/Prime</label>
+              <input id="org" type="text" class="w-full bg-navy border border-navy-medium px-4 py-3 text-sm text-gray-200 focus:border-gold focus:outline-none transition-colors" placeholder="Defense Corp" />
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label for="email" class="text-xs font-heading uppercase tracking-widest text-gray-400">Official Email</label>
+            <input id="email" type="email" required class="w-full bg-navy border border-navy-medium px-4 py-3 text-sm text-gray-200 focus:border-gold focus:outline-none transition-colors" placeholder="poc@example.com" />
+          </div>
+
+          <div class="space-y-2">
+            <label for="clearance" class="text-xs font-heading uppercase tracking-widest text-gray-400">Clearance/ITAR Requirements</label>
+            <input id="clearance" type="text" class="w-full bg-navy border border-navy-medium px-4 py-3 text-sm text-gray-200 focus:border-gold focus:outline-none transition-colors" placeholder="e.g. CGP, Secret Level II..." />
+          </div>
+
+          <div class="space-y-2">
+            <label for="scope" class="text-xs font-heading uppercase tracking-widest text-gray-400">Engagement Scope</label>
+            <textarea id="scope" rows="4" class="w-full bg-navy border border-navy-medium px-4 py-3 text-sm text-gray-200 focus:border-gold focus:outline-none transition-colors resize-none" placeholder="Detail the operational requirements and platform domain..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full inline-flex justify-center items-center gap-3 bg-gold text-navy px-8 py-4 font-heading text-sm tracking-[0.2em] uppercase font-semibold hover:opacity-90 transition-opacity">
+            Send Inquiry
+            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </form>
+        <script>
+          document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const org = document.getElementById('org').value;
+            const email = document.getElementById('email').value;
+            const clearance = document.getElementById('clearance').value;
+            const scope = document.getElementById('scope').value;
+
+            const subject = encodeURIComponent(`SafeAero Engagement Inquiry — ${name}${org ? ' (' + org + ')' : ''}`);
+            const body = encodeURIComponent(
+              `Point of Contact: ${name}\n` +
+              `Organization: ${org || 'N/A'}\n` +
+              `Email: ${email}\n` +
+              `Clearance/ITAR Requirements: ${clearance || 'N/A'}\n` +
+              `\nEngagement Scope:\n${scope || 'N/A'}`
+            );
+
+            window.location.href = `mailto:fsafeaero@gmail.com?subject=${subject}&body=${body}`;
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container mx-auto px-6 mt-24 pt-8 border-t border-navy-medium">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+      <p>© {currentYear} SafeAero Solutions Inc. | Francis Ukposidolo. All rights reserved.</p>
+      <p class="font-heading tracking-widest uppercase">
+        Aerospace & Defense Quality Consulting
+      </p>
+    </div>
+  </div>
+</section>

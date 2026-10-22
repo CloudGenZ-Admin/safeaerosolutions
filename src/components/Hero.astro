@@ -1,0 +1,82 @@
+---
+import heroBg from '../assets/hero-bg.jpg';
+
+const badges = [
+  'Active Secret Level II (Exp: 2030)',
+  'CGP Approved & Registered',
+  'AS9100 Rev D Lead Auditor',
+  'ISO 9001:2015 Lead Auditor',
+  'TCCA AME M2',
+  'FAA A&P License',
+  'Quality Management Certified (QMC)',
+];
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-30"
+    style={`background-image: url(${heroBg.src})`}
+  ></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/80 to-navy"></div>
+
+  <div class="relative z-10 container mx-auto px-6 py-24 text-center mt-12">
+    <div class="flex justify-center gap-3 mb-6">
+      <!-- Shield -->
+      <svg class="w-6 h-6 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      <!-- Award -->
+      <svg class="w-6 h-6 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+      <!-- Plane -->
+      <svg class="w-6 h-6 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+    </div>
+
+    <h1 class="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight uppercase mb-4">
+      SafeAero <span class="text-gradient-gold">Solutions Inc.</span>
+    </h1>
+    <p class="font-heading text-lg sm:text-xl md:text-2xl tracking-[0.1em] md:tracking-[0.2em] uppercase text-gray-200 mb-6">
+      Safeguarding Defense Compliance & Operational Excellence
+    </p>
+
+    <div class="w-24 h-[2px] bg-gold mx-auto mb-8"></div>
+
+    <h2 class="font-heading text-2xl sm:text-3xl font-bold uppercase tracking-tight mb-2 text-gray-200/90">
+      Led By Francis <span class="text-gradient-gold">Ukposidolo</span>
+    </h2>
+    <p class="font-heading text-sm sm:text-base tracking-[0.2em] uppercase text-gray-400 mb-3">
+      CEO & Principal Consultant | Airworthiness SME
+    </p>
+    <p class="text-base sm:text-lg text-gold font-medium tracking-wide mb-10 max-w-2xl mx-auto">
+      Architecting precision aerospace solutions and tactical mission software compliance for Tier-1 defense primes.
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-4xl mx-auto mb-12">
+      <a
+        href="#contact"
+        class="w-full sm:w-auto px-8 py-4 bg-gold text-navy font-heading text-sm tracking-[0.2em] uppercase font-semibold hover:opacity-90 transition-opacity"
+      >
+        Engagement Portal
+      </a>
+      <a
+        href="#overview"
+        class="w-full sm:w-auto px-8 py-4 border border-gold text-gold font-heading text-sm tracking-[0.2em] uppercase font-semibold hover:bg-gold/10 transition-colors"
+      >
+        Review Credentials Matrix
+      </a>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-5xl mx-auto">
+      {badges.map((badge) => (
+        <span class="px-3 sm:px-4 py-1.5 border border-navy-medium text-[10px] sm:text-xs font-heading tracking-widest uppercase text-gray-400 hover:border-gold hover:text-gold transition-colors duration-300">
+          {badge}
+        </span>
+      ))}
+    </div>
+
+    <div class="mt-16">
+      <a href="#about" class="inline-block">
+        <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex items-start justify-center p-1.5 mx-auto hover:border-gold transition-colors">
+          <div class="w-1.5 h-1.5 bg-gold rounded-full animate-bounce"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

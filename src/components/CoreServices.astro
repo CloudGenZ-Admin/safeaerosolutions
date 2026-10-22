@@ -1,0 +1,95 @@
+---
+const capabilities = [
+  {
+    category: 'Life Cycle Quality Management (LCQM)',
+    items: [
+      'Strategic quality engineering.',
+      'Material condition monitoring.',
+      'Reliability management spanning marine, aircraft, and heavy equipment assets under strict DQA mandates.',
+    ],
+  },
+  {
+    category: 'Controlled Goods & ITAR Compliance',
+    items: [
+      "Fully registered and authorized under Canada's Controlled Goods Program (CGP).",
+      'Authorized to examine, possess, or transfer controlled goods.',
+      'Management of tactical data and military components.',
+    ],
+  },
+  {
+    category: 'Defense Lifecycle Materiel Management (LCMM)',
+    items: [
+      'Expert execution of engineering change controls.',
+      'Structural maintenance optimization.',
+      'Baseline modification validation & systems engineering (SE).',
+      'Configuration management (CM) & long-term lifecycle planning.',
+    ],
+  },
+  {
+    category: 'Global Registrar Auditing',
+    items: [
+      'Qualified 3rd-party aerospace registrar assessor.',
+      'Approved strict industry codes: 4, 5, 12, 14, 17/2, 18, 19, 21, 22, 23, 24, 29/2, and 34.',
+      'Delivers Stage 1, Stage 2, and Surveillance Audits under AS9100 Rev D, ISO 9001:2015, ISO 14001, and IATF 16949.',
+    ],
+  },
+  {
+    category: 'Airworthiness & Regulatory Navigation',
+    items: [
+      'Seamless liaison capabilities.',
+      'DND Technical Airworthiness Rules (TAR).',
+      'NATO standards (AQAP).',
+      'Transport Canada Civil Aviation (TCCA CARs 571/573) and FAA FARs.',
+    ],
+  },
+  {
+    category: 'Risk & Supply Chain Assurance',
+    items: [
+      'Investigating Unsatisfactory Condition Reports (UCR) & Technical Failure Reports (TFR).',
+      'Clearing Engineering Changes (ECs).',
+      'Mapping complex baseline data within DRMIS (SAP) and RIDIMS.',
+    ],
+  },
+  {
+    category: 'Senior Technical Advisory',
+    items: [
+      'Operates independently in a high-level consulting capacity.',
+      'Providing technical advice & leading cross-functional teams.',
+      'Navigating unionized environments.',
+      'Confidently challenging processes to maximize safety and efficiency.',
+    ],
+  },
+];
+---
+
+<section class="py-24 md:py-32 bg-navy">
+  <div class="container mx-auto px-6 max-w-7xl">
+    <div class="fade-in mb-14 max-w-3xl mx-auto text-center">
+      <h2 class="font-heading text-sm tracking-[0.4em] uppercase text-gold mb-3">
+        Core Capabilities
+      </h2>
+      <div class="w-16 h-[2px] bg-gold mx-auto mb-8"></div>
+      <p class="text-gray-300 leading-relaxed text-lg">
+        SafeAero Solutions provides highly specialized capabilities tailored specifically for Tier-1 defense prime contractors, aerospace registrars, and government entities.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      {capabilities.map((service, i) => (
+        <div class="fade-in border border-navy-medium bg-navy-light/40 p-8 hover:border-gold/50 transition-colors h-full" style={`transition-delay: ${i * 0.1}s`}>
+          <h3 class="font-heading text-sm font-semibold tracking-wide uppercase text-gold mb-6 h-10">
+            {service.category}
+          </h3>
+          <ul class="space-y-4">
+            {service.items.map((item) => (
+              <li class="flex items-start gap-3 text-sm text-gray-400">
+                <svg class="w-5 h-5 text-gold/60 mt-0.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span class="leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

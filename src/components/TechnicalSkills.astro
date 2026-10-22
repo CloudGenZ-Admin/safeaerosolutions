@@ -1,0 +1,75 @@
+---
+const technicalSkills = [
+  {
+    title: 'Standards & Compliance',
+    text: 'DQA Directives, LCQM, CGP Compliance, AS9100 Rev D, ISO 9001:2015, IATF 16949, ISO 14001, OHSMS, NATO AQAP, Government Quality Assurance (GQA), Transport Canada (TCCA) CARs, FAA Regulations (FARs)',
+  },
+  {
+    title: 'Auditing & Oversight',
+    text: 'Stage 1 & Stage 2 Audits, Surveillance Audits, 1st/2nd/3rd Party Registrar Audits, Service Provider/Supplier Audits, Internal Auditing, Process & Risk Assessments, Gap Analysis, RCCA, NCR Management',
+  },
+  {
+    title: 'Defense & Aerospace Domains',
+    text: 'Military Fixed-Wing Aircraft, Avionics & EO/IR Payload Systems, Marine/Naval Vessels, Tactical Heavy Equipment, Fleet Life-Extension Programs',
+  },
+  {
+    title: 'Systems & Software Tools',
+    text: 'DRMIS (SAP), RIDIMS, Configuration Management Systems, Engineering Change (EC) Tracking Tools',
+  },
+  {
+    title: 'Executive Leadership',
+    text: 'High-Stakes Stakeholder Relations, Regulatory Liaison, Independent Verification & Validation (IV&V), Unionized Workforce Relations, Mentorship & Technical Training',
+  },
+];
+
+const platforms = [
+  'CF-188 Hornet', 'CP-140 Aurora', 'Bombardier Global Series', 'Challenger Series',
+  'Dash 8 (D8/Q400)', 'Learjet', 'ATR 42', 'Lockheed C-130 Hercules',
+  'Boeing 747/737/727', 'McDonnell Douglas DC10', 'Airbus A310/A320',
+];
+---
+
+<section class="py-24 bg-navy-light/40">
+  <div class="container mx-auto px-6 max-w-6xl">
+
+    <!-- Platforms -->
+    <div class="fade-in mb-24 text-center">
+      <p class="font-heading text-sm tracking-[0.3em] text-gold uppercase mb-8">
+        Authoritative Platforms & Operational Engagements
+      </p>
+      <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 opacity-70">
+        {platforms.map((platform) => (
+          <h3 class="font-heading text-sm md:text-base font-bold uppercase tracking-widest text-gray-400 border border-navy-medium px-4 py-2 bg-navy">
+            {platform}
+          </h3>
+        ))}
+      </div>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-heading text-xl uppercase text-gray-200 mb-10 text-center font-semibold tracking-wide">
+        Technical Skills Portfolio
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {technicalSkills.map((skill, i) => (
+          <div class="fade-in p-6 border border-navy-medium bg-navy shadow-sm hover:border-gold/50 transition-colors" style={`transition-delay: ${i * 0.1}s`}>
+            <div class="mb-4 inline-block p-3 bg-gold/10 rounded-full">
+              {i === 0 && <svg class="w-6 h-6 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>}
+              {i === 1 && <svg class="w-6 h-6 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/></svg>}
+              {i === 2 && <svg class="w-6 h-6 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>}
+              {i === 3 && <svg class="w-6 h-6 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>}
+              {i === 4 && <svg class="w-6 h-6 text-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>}
+            </div>
+            <h3 class="font-heading text-sm font-bold uppercase tracking-wide text-gray-200 mb-3">
+              {skill.title}
+            </h3>
+            <div class="w-8 h-[1px] bg-gold mb-4"></div>
+            <p class="text-sm text-gray-400 leading-relaxed">{skill.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>

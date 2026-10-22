@@ -1,0 +1,132 @@
+---
+const sectors = [
+  { name: 'Advanced Metallurgy & Chemicals (4, 5, 17/2, 18)' },
+  { name: 'Aerospace/Defense Manufacturing (12, 14, 19)' },
+  { name: 'Avionics & Optical Systems (21, 22)' },
+  { name: 'Logistics, Repair & Engineering (23, 24, 29/2, 34)' },
+];
+
+const methodologyPhases = [
+  {
+    title: 'Phase I: Stage 1 Documentation Review & Readiness Assessment',
+    items: [
+      "Evaluate the maturity of the organization's Quality Management System (QMS) prior to on-site testing.",
+      'Contextual verification of the Quality Manual, Context of the Organization (Clause 4), and Leadership commitment matrices (Clause 5).',
+      'Map core processes against regulatory frameworks (TCCA CARs 571/573, FAA Part 145, DND TAR).',
+      'Output: Comprehensive Gap Analysis Report highlighting operational shortfalls or documentation deficiencies.',
+    ],
+  },
+  {
+    title: 'Phase II: Stage 2 On-Site Certification Audits',
+    items: [
+      'Deep-dive physical verification of execution depth, process repeatability, and product realization (Clause 8).',
+      'Deploy process-based auditing utilizing the PEAR (Process Effectiveness Assessment Report) framework.',
+      'Trace raw material intake through advanced metallurgy treatments up to final functional flight testing parameters.',
+      'Output: Documented, evidence-based audit log classifying Major/Minor Non-Conformances and OFIs.',
+    ],
+  },
+  {
+    title: 'Phase III: Surveillance Audits & CAPA Lifecycle Management',
+    items: [
+      'Verify continuous QMS health, systemic maturation, and sustainable continuous improvement loops.',
+      'Targeted focus on high-risk manufacturing nodes and engineering change control mechanisms.',
+      'Mandate exhaustive Root Cause Corrective Action (RCCA) lifecycle: Immediate Containment, Root Cause Analysis (5-Why/Fishbone).',
+      'Implementation of engineered workflow solutions and Verification of Effectiveness after 90 days.',
+    ],
+  },
+  {
+    title: 'Phase IV: 2nd-Party Supplier & Service Provider Audits',
+    items: [
+      'Shield Tier-1 primes from sub-tier supply chain contamination, material tracing failure, or counter-intelligence vulnerabilities.',
+      'Comprehensive sub-contractor profiling focusing on tool calibration traceability and raw material batch tracing.',
+      'Verification of counterfeit part mitigation programs and Controlled Goods/ITAR data sanitization protocols.',
+    ],
+  },
+];
+
+const specializations = [
+  {
+    title: 'Avionics, Optronics & Software Configurations (Sectors 21/22)',
+    text: 'Direct compliance auditing of software loading logs, wire harness shield continuity tests, resistance metrics, and Flight Data Recorder (FDR) parameter streams.',
+  },
+  {
+    title: 'Advanced Structures & Metallurgy Closeouts (Sectors 4/14/18)',
+    text: 'Auditing of Nondestructive Testing (NDT) records (Eddy Current, Ultrasound, Industrial X-Ray). Rigorous closeout and visual "buy-back" protocols for unsealed fuel cells, composite wing boxes (CFRP), and structural flight control surfaces to ensure absolute Foreign Object Debris (FOD) mitigation.',
+  },
+  {
+    title: 'Defense Asset Procurement & Change Control (Sectors 12/34)',
+    text: 'Auditing of Technical Failure Reports (TFR) and Engineering Changes (ECs) against technical baseline data within federal management suites (DRMIS/SAP and RIDIMS).',
+  },
+  {
+    title: 'Operational Principles: Culture & Independence',
+    text: "SafeAero Solutions Inc. maintains strict structural separation from production quotas. We champion a non-punitive Just Culture—engineering errors are treated as systemic indicators requiring workflow redesign, while willful procedural violations are isolated. Authorized to provide senior-level technical advice and directly challenge non-compliant operational baselines to preserve absolute structural airworthiness and contract integrity.",
+  },
+];
+---
+
+<section class="py-24 md:py-32 bg-navy-light/30">
+  <div class="container mx-auto px-6 max-w-7xl">
+    <div class="fade-in mb-20">
+      <h2 class="font-heading text-sm tracking-[0.4em] uppercase text-gold mb-3">
+        Technical Proposal Addendum: Audit Methodology
+      </h2>
+      <div class="w-16 h-[2px] bg-gold mb-6"></div>
+      <p class="text-sm font-mono text-gray-400 mb-10">
+        Document Ref: SAS-EAM-2026-REV2 | Principal Assessor: Francis Ukposidolo
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+        {sectors.map((ind, i) => (
+          <div class="border border-navy-medium bg-navy p-5 text-center hover:border-gold/50 transition-colors duration-300">
+            {i === 0 && <svg class="w-6 h-6 text-gold mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg>}
+            {i === 1 && <svg class="w-6 h-6 text-gold mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>}
+            {i === 2 && <svg class="w-6 h-6 text-gold mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>}
+            {i === 3 && <svg class="w-6 h-6 text-gold mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>}
+            <p class="text-xs font-heading tracking-wide uppercase text-gray-400">
+              {ind.name}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <h2 class="font-heading text-xl uppercase text-gray-200 mb-3 font-semibold tracking-wide">
+        End-to-End Certification Lifecycle Architecture
+      </h2>
+      <div class="w-16 h-[2px] bg-gold mb-8"></div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        {methodologyPhases.map((phase) => (
+          <div class="p-6 border border-navy-medium bg-navy">
+            <h3 class="text-gold font-heading text-sm uppercase tracking-wider mb-4 font-bold">
+              {phase.title}
+            </h3>
+            <ul class="space-y-3">
+              {phase.items.map((item) => (
+                <li class="flex items-start gap-3">
+                  <div class="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></div>
+                  <span class="text-sm text-gray-300 leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="font-heading text-xl uppercase text-gray-200 mb-3 font-semibold tracking-wide">
+        High-Consequence Technical Specializations
+      </h2>
+      <div class="w-16 h-[2px] bg-gold mb-8"></div>
+
+      <div class="space-y-6 max-w-4xl">
+        {specializations.map((spec) => (
+          <div class="p-5 border-l-2 border-gold bg-navy shadow-sm">
+            <h4 class="font-heading text-sm text-gold uppercase mb-2">{spec.title}</h4>
+            <p class="text-sm text-gray-400">{spec.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

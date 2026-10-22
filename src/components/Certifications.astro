@@ -1,0 +1,101 @@
+---
+const certifications = [
+  {
+    title: 'Security Clearance: Active Secret Level II',
+    summary: 'Authorized to architect, lead, and safeguard highly classified, ITAR-adjacent aerospace and defense initiatives.',
+    details: [
+      'File No: 96249739',
+      'Expiry: Jan 30, 2030',
+      'Immediate readiness for DND / NATO highly classified environments.',
+    ],
+  },
+  {
+    title: "Canada's Controlled Goods Program (CGP)",
+    summary: 'Fully Approved & Registered.',
+    details: [
+      'Fully registered and authorized to examine, possess, or transfer controlled goods.',
+      'Management of tactical data and military components under CGP mandates.',
+      'Compliance verification of ITAR data sanitization protocols.',
+    ],
+  },
+  {
+    title: 'AS9100 Rev D & ISO 9001:2015 Lead Auditor',
+    summary: 'Accredited 3rd-party aerospace registrar assessor.',
+    details: [
+      'Delivers expert Stage 1 (Readiness), Stage 2 (Certification), and Surveillance Audits.',
+      'Executes audits for global bodies including TUV Rheinland and BSI Group.',
+      'Evaluates risk-based thinking in aerospace supply chains.',
+    ],
+  },
+  {
+    title: 'Quality Management Certified (QMC) & IATF 16949',
+    summary: 'Extensive qualifications in complex manufacturing supply chain quality systems.',
+    details: [
+      'Multi-Standard Compliance Assessments.',
+      'Defect prevention systems and RCCA / NCR Management.',
+      'Also holds ISO 14001 (Environmental) auditing experience.',
+    ],
+  },
+  {
+    title: 'TCCA AME M2 & FAA A&P License',
+    summary: 'Transport Canada Civil Aviation & Federal Aviation Administration maintenance credentials.',
+    details: [
+      'Maintenance and release authority on multi-engine commercial and tactical aircraft.',
+      'Deep operational footprint on heavy commercial jets and military fixed-wing.',
+      'Seamless liaison between civil (CARs/FARs) and military (TAR) regulations.',
+    ],
+  },
+  {
+    title: 'Aircraft Certification Authority (ACA) Endorsed',
+    summary: 'Authorized specific platform endorsements across high-performance aircraft.',
+    details: [
+      'Endorsed across Dash 8 (D8).',
+      'Endorsed across CRJ Series.',
+      'Endorsed across Learjet variants.',
+      'Endorsed across Challenger CL-850 platforms.',
+    ],
+  },
+];
+---
+
+<section class="py-24 md:py-32 bg-navy-light/20">
+  <div class="container mx-auto px-4 md:px-6 max-w-6xl">
+    <div class="fade-in mb-12 md:mb-16 text-center">
+      <h2 class="font-heading text-xs md:text-sm tracking-[0.4em] uppercase text-gold mb-3">
+        Corporate Profile & Executive Credentials
+      </h2>
+      <div class="w-16 h-[2px] bg-gold mx-auto"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
+      {certifications.map((cert, i) => (
+        <details class="fade-in group border border-navy-medium bg-navy/80 p-5 md:p-6 rounded-xl hover:border-gold/60 hover:shadow-lg transition-all duration-300" style={`transition-delay: ${i * 0.05}s`}>
+          <summary class="cursor-pointer list-none flex items-start gap-4">
+            <div class="flex-1">
+              <h3 class="font-heading text-sm md:text-base font-semibold tracking-wide uppercase mb-2 group-hover:text-gold transition-colors pr-2">
+                {cert.title}
+              </h3>
+              <p class="text-sm text-gray-400 leading-relaxed">
+                {cert.summary}
+              </p>
+            </div>
+            <svg class="w-5 h-5 text-gray-400 shrink-0 mt-1 transition-transform group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <ul class="mt-4 space-y-2">
+            {cert.details.map((d) => (
+              <li class="text-sm text-gray-300 flex items-start gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0 shadow-[0_0_5px_rgba(212,175,55,0.8)]"></span>
+                <span class="leading-snug">{d}</span>
+              </li>
+            ))}
+          </ul>
+        </details>
+      ))}
+    </div>
+
+    <p class="text-xs text-gray-500 mt-10 flex items-center justify-center gap-2">
+      <span class="animate-pulse w-2 h-2 rounded-full bg-gold"></span>
+      Click any credential to expand validation details
+    </p>
+  </div>
+</section>
